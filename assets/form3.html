@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<form name="userRegistrationform3" novalidate>
+					<div class="form-group">
+						<div class="row">
+							<div>
+								1. צילום תעודות השכלה (תעודת בגרות/סיום 12 שנות לימוד/מכינה 30+/קדם הנדסאים/אחר).<br>
+								2. צילום תעודת שחרור מצה"ל/שרות לאומי.<br>
+								3. צילום תעודת זהות (כולל ספח הכתובת).<br>
+								4. צילום תעודת עולה (באם ישנה).<br>
+								5. תמונת פספורט עדכנית - סרוקה במייל או במעמד ההרשמה.<br>
+								6. אבחון לקויי למידה (במידה וקיים) בתוקף מ- 5 השנים האחרונות (יש להעביר מקור).<br>
+								7. תשלום  דמי רישום בסך 200 ₪ במעמד ההרשמה. (בכל מקרה של ביטול, דמי הרישום אינם מוחזרים).<br>
+								8. תרגום נוטריוני של תעודות השכלה מחו"ל (באם יש).<br>
+								9. צילום תעודות השכלה גבוהה קודמת/אחרת. <br><br><br>    
+							</div>
+						</div>
+						<div class="row">
+							<h4>מידע אישי נוסף והערות</h4>
+							<p>על מנת שנוכל להיערך בצורה הטובה ביותר לקראתך בשנת הלימודים הבאה, אנו מבקשים לקבל ממך את מלוא                                           המידע שיסייע לנו בתהליך הקליטה: <p>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4"></div>
+							<div class="col-sm-4 col-md-4"></div>
+							<div class="col-sm-4 col-md-4">
+								<label>1. שליטה בשפה העברית - אנא סמן:</label>
+							</div>
+						</div>
+						<div class="row selectdiv">
+							<div class="col-sm-6 col-md-6"></div>
+							<div class="col-sm-6 col-md-6">
+								<label class="checkbtn">דיבור:</label>
+								<input type="checkbox" id="Checkbox1" class="filled-in checkbtn" />
+								<label for="Checkbox1"> גבוהה  </label>
+								<input type="checkbox" id="Checkbox2" class="filled-in checkbtn" />
+								<label for="Checkbox2">בינונית   </label>
+								<input type="checkbox" id="Checkbox3" class="filled-in checkbtn" />
+								<label for="Checkbox3">מוכה </label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 col-md-6"></div>
+							<div class="col-sm-6 col-md-6">
+								<label class="checkbtn">קריאה:</label>
+								<input type="checkbox" id="Checkbox4" class="filled-in checkbtn" />
+								<label for="Checkbox4">גבוהה</label>
+								<input type="checkbox" id="Checkbox5" class="filled-in checkbtn" />
+								<label for="Checkbox5"> בינונית  </label>
+								<input type="checkbox" id="Checkbox6" class="filled-in checkbtn"  />
+								<label for="Checkbox6">מוכה  </label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 col-md-6"></div>
+							<div class="col-sm-6 col-md-6">
+								<label class="checkbtn">כתיבה:</label>
+								<input type="checkbox" id="Checkbox7" class="filled-in checkbtn" />
+								<label for="Checkbox7">גבוהה</label>
+								<input type="checkbox" id="Checkbox8" class="filled-in checkbtn" />
+								<label for="Checkbox8">בינונית</label>
+								<input type="checkbox" id="Checkbox9" class="filled-in checkbtn" />
+								<label for="Checkbox9">מוכה</label>
+							</div>
+						</div>
+						<div class="row selectdiv">
+							<div class="col-sm-4 col-md-4"></div>
+							<div class="col-sm-4 col-md-4">
+								<input type="text" name="fentity" ng-model="register4.fentity" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label>2. גורם מממן: פרטי/ ארגון /אחר פרט/י:</label>
+							</div>
+						</div>
+						<div class="addbalance" style="margin-top: 2%;"><button ng-disabled="userRegistrationform3.$invalid" ng-click="registration3()">submit</button></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

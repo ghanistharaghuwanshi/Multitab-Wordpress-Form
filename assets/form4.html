@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<form name="userRegistrationform4" novalidate>
+					<h4>השלמת תנאי קבלה </h4>
+					<div class="form-group">
+						<div class="row">
+							<div>
+								אני החתום מטה מאשר בחתימתי כי ידוע לי שאני מתקבל לביה"ס להנדסאים במעמד של סטודנט שלא מן המניין והנני מתחייב להשלים עד תום השנה הראשונה ללימודי, בחינת בגרות במקצוע:
+							</div>
+						</div>
+						<div class="row checkdiv">
+							<div class="col-sm-6 col-md-6"></div>
+							<div class="col-sm-6 col-md-6">
+								<input type="checkbox" id="myCheck1" class="filled-in" />
+								<label for="myCheck1" class="check">אנגלית	ה</label>
+								<input type="checkbox" id="myCheck2" class="filled-in" />
+								<label for="myCheck2" class="check">מתמטיקה</label>
+								<input type="checkbox" id="myCheck3" class="filled-in" />
+								<label for="myCheck3" class="check">הבעה עברית</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="checkdiv">
+								הנני מצהיר בזאת כי ידוע לי שללא השלמת התחייבויותיי הנזכרות לעיל עד התאריך הנקוב, תהיה הנהלת 
+								המכללה הטכנולוגית רשאית להפסיק את לימודי וזאת עד להשלמת תנאי הקבלה הנדרשים.
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4"></div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform4.date.$invalid && !userRegistrationform4.date.$pristine" class="help-block red-text">Please enter date</p><input type="date" class="date inputbox" name="date" ng-model="register5.date" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform4.sign.$invalid && !userRegistrationform4.sign.$pristine" class="help-block red-text">Please enter sign</p><input type="text" class="inputbox" name="sign" ng-model="register5.sign" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4"></div>
+							<div class="col-sm-4 col-md-4">
+								<label for="date">   תאריך</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="sign"> חתימה</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4"></div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform4.firstname.$invalid && !userRegistrationform4.firstname.$pristine" class="help-block red-text">Please enter firstname</p><input type="text" class="inputbox" name="firstname" ng-model="register5.firstname" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform4.lastname.$invalid && !userRegistrationform4.lastname.$pristine" class="help-block red-text">Please enter lastname</p><input type="text" class="inputbox" name="lastname"  ng-model="register5.lastname" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4"></div>
+							<div class="col-sm-4 col-md-4">
+								<label for="firstname">שם פרטי</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="lastname"> שם משפחה</label>
+							</div>
+						</div>
+						<div class="addbalance" style="margin-top: 2%;"><button ng-disabled="userRegistrationform4.$invalid" ng-click="registration4()">submit</button></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

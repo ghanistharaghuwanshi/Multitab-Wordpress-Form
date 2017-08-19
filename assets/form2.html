@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<form name="userRegistrationform2" novalidate>
+				<h4> השכלה</h4>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform2.year.$invalid && !userRegistrationform2.year.$pristine" class="help-block red-text">Please enter year</p><input type="number" min="0" name="year"  ng-model="register2.year" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform2.city.$invalid && !userRegistrationform2.city.$pristine" class="help-block red-text">Please enter city</p><input type="text" name="city" ng-model="register2.city" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform2.highschool.$invalid && !userRegistrationform2.highschool.$pristine" class="help-block red-text">Please enter highschool</p><input type="text" name="highschool" ng-model="register2.highschool" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<label for="year">משנה</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="city">עיר/ארץ</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="highschool">ביה"ס התיכון בו למדת</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-8 col-sm-8 col-md-8 selectdiv">
+								<label>סוג בגרות</label>
+								<label for="myCheckbox1" class="checkbtn"> סמן ב-X)  </label>
+								<input type="checkbox" id="myCheckbox1" class="filled-in" />
+								<label for="myCheckbox2" class="checkbtn">מלאה  </label>
+								<input type="checkbox" id="myCheckbox2" class="filled-in" />
+								<label for="myCheckbox3" class="checkbtn">חלקית</label>
+								<input type="checkbox" id="myCheckbox3" class="filled-in" />
+								<label for="myCheckbox4" class="checkbtn">חו"ל</label>
+								<input type="checkbox" id="myCheckbox4" class="filled-in" />
+							</div>
+							<div class="col-lg-4 col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform2.toyear.$invalid && !userRegistrationform2.toyear.$pristine" class="help-block red-text">Please enter toyear</p><input type="number" min="0" name="toyear" ng-model="register2.toyear" required>
+							</div>
+						<div class="row">
+							<div class="col-lg-4 col-sm-4 col-md-4"></div>
+							<div class="col-lg-4 col-sm-4 col-md-4"></div>
+							<div class="col-lg-4 col-sm-4 col-md-4">
+								<label class="toyr" for="toyear">עד שנה</label>
+							</div>
+						</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<input type="text" name="yredu" ng-model="register2.yredu" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<input type="text" name="other" ng-model="register2.other" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="yredu">מספר שנות לימוד</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="other"> אחר</label>
+							</div>
+						</div>
+						<div class="row checkdiv">
+							<label>  נא סמן את סוג השירות </label>
+							<label for="myCheckbox5" class="checkbtn"> צה"ל  </label>
+							<input type="checkbox" id="myCheckbox5" class="filled-in" />
+							<label for="myCheckbox6" class="checkbtn">לאומי  </label>
+							<input type="checkbox" id="myCheckbox6" class="filled-in" />
+							<label for="myCheckbox7" class="checkbtn">פטור</label>
+							<input type="checkbox" id="myCheckbox7" class="filled-in" />
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform2.pnumber.$invalid && !userRegistrationform2.pnumber.$pristine" class="help-block red-text">Please enter personal number</p><input type="number" min="0" name="pnumber" ng-model="register2.pnumber" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform2.releasedate.$invalid && !userRegistrationform2.releasedate.$pristine" class="help-block red-text">Please enter releasedate</p><input type="date" name="releasedate" class="date" ng-model="register2.releasedate" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform2.armydate.$invalid && !userRegistrationform2.armydate.$pristine" class="help-block red-text">Please enter armydate </p><input type="date" name="armydate" class="date" ng-model="register2.armydate" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<label for="pnumber">מספר אישי</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="releasedate">תאריך שחרור</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="armydate">תאריך גיוס</label>
+							</div>
+						</div>
+						<div>
+							<button ng-disabled="userRegistrationform2.$invalid" ng-click="registration2()">submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

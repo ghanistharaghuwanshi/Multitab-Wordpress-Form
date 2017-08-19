@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<form name="userRegistrationform5" novalidate>
+					<h2>הצהרת המועמד </h2>
+					<div class="form-group">
+						<div class="row">
+							1. הנני מצהיר בזאת שכל הפרטים האישיים אשר נרשמו בטופס מלאים ומדויקים והנני מתחייב להשלימם/לעדכנם עפ"י הצורך. <br>
+							2. ידוע לי כי מסירת פרטים לא נכונים תשלול ממני את הזכות ללימודים בביה"ס להנדסאים ובמכללה ומתן כל אישור מטעם המוסד.<br>
+							3. ידוע לי כי טופס הרשמה זה אינו מהווה כל אישור על קבלה ללימודים בביה"ס להנדסאים.<br>
+							4. תהליך הקליטה והקבלה מורכב משני שלבים: מילוי טופס הרישום הינו שלב א'. לאחר עמידה בהצלחה 
+							בוועדת קבלה, יש להשלים את הליך הרישום על ידי מילוי ושליחת כתב התחייבות כספית ותשלום מקדמה. 
+							מילוי כתב ההתחייבות, עמידה בהצלחה בוועדת קבלה ותשלום מקדמה, מהווים אישור קבלה סופי למכללה הטכנולוגית כנרת. <br>   
+							5. ידוע לי כי בהתאם לתקנות ביטוח לאומי יועברו פרטיי האישיים אל המוסד לביטוח לאומי, על מנת לאפשר למוסד להפנות אלי דרישת תשלום דמי ביטוח לאומי ודמי ביטוח בריאות.<br>
+							6. ידוע לי כי ביטול ההרשמה יתקיים בהודעה מסודרת למדור רישום באמצעות אימייל/פקס/טלפון.<br> 
+							7. ידוע לי כי פתיחת כל המסלולים מותנית במספר הנרשמים.<br>
+							8. ידוע לי כי במסגרת תנאי הקבלה תיתכן דרישה לקורס הכנה ו/או מבחן, בהתאם לדרישת ראש המגמה.<br>
+						</div>
+						<div class="row selectdiv">
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform5.id.$invalid && !userRegistrationform5.id.$pristine" class="help-block red-text">Please enter id</p><input type="number" class="inputbox" name="id" ng-model="register5.id" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform5.date.$invalid && !userRegistrationform5.date.$pristine" class="help-block red-text">Please enter date</p><input type="date" name="date" class="date inputbox" ng-model="register.date" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform5.sign.$invalid && !userRegistrationform5.sign.$pristine" class="help-block red-text">Please enter sign</p><input type="text" class="inputbox" name="sign" ng-model="register5.sign" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<label for="id">ת.ז.</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="date">תאריך </label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="sign"> חתימה</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4"></div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform5.firstname.$invalid && !userRegistrationform5.firstname.$pristine" class="help-block red-text">Please enter firstname</p><input type="text" name="firstname" class="inputbox" ng-model="register5.firstname" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform5.lastname.$invalid && !userRegistrationform5.lastname.$pristine" class="help-block red-text">Please enter lastname</p><input type="text" name="lastname" class="inputbox" ng-model="register5.lastname" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4"></div>
+							<div class="col-sm-4 col-md-4">
+								<label for="firstname">שם פרטי</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="lastname"> משפחה</label>
+							</div>
+						</div>
+					</div>
+				</form>
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" name="frmPayPal1">
+					<input type="hidden" name="business" value="priyanshi.agrawal-facilitator@deltabee.com">
+					<input type="hidden" name="cmd" value="_xclick">
+					<input type="hidden" name="item_name" value="PHPGang Payment">
+					<input type="hidden" name="item_number" value="1">
+					<input type="hidden" name="amount" value="10">
+					<input type="hidden" name="cpp_header_image" value="http://www.phpgang.com/wp-content/uploads/gang.jpg">
+					<input type="hidden" name="no_shipping" value="1">
+					<input type="hidden" name="currency_code" value="USD">
+					<input type="hidden" name="rm" value="2" />
+					<input type="hidden" name="notify_url" value="http://wp.ktec.co.il/wp-content/plugins/angularPlugin/assets/payment-success.php" />
+					<input type="hidden" name="cancel_return" value="http://demo.phpgang.com/payment_with_paypal/cancel.php">
+					<input type="hidden" name="return" value="http://wp.ktec.co.ils/wp-content/plugins/angularPlugin/assets/payment-success.php">
+					<div class="addbalance"><button ng-disabled="userRegistrationform5.$invalid" ng-click="registration()">submit</button></div> 
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+
+

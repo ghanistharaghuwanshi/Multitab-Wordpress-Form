@@ -1,0 +1,186 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<style>
+		select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+			max-height: 35px !important;
+			width: 100% !important;
+		}
+		input[type=radio]{
+			vertical-align: middle;
+			margin-top: -1px;
+		}
+		.form-group .radiobtn{
+			margin: 0 !important;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<form name="userRegistrationform" novalidate>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-2 col-md-2">
+								<label class="radiobtn"><input type="radio" name="gender" ng-model="register.male">&nbsp;זָכָר</label>
+								<label class="radiobtn"><input type="radio" name="gender" ng-model="register.female">&nbsp;נְקֵבָה</label>
+							</div>
+							<div class="col-sm-3 col-md-3">
+								<p ng-show="userRegistrationform.firstname.$invalid && !userRegistrationform.firstname.$pristine" class="help-block red-text">Please enter firstname</p><input type="text" name="firstname" ng-model="register.firstname" required>
+							</div>
+							<div class="col-sm-3 col-md-3">
+								<p ng-show="userRegistrationform.lasttname.$invalid && !userRegistrationform.lasttname.$pristine" class="help-block red-text">Please enter lasttname</p><input type="text" name="lasttname" ng-model="register.lasttname" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.id.$invalid && !userRegistrationform.id.$pristine" class="help-block red-text">Please enter id</p><input type="number" name="id" ng-model="register.id" required>
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-2 col-md-2">
+								<label for="gender">מגדר</label>
+							</div>
+							<div class="col-sm-3 col-md-3">
+								<label for="firstname">שם פרטי</label>
+							</div>
+							<div class="col-sm-3 col-md-3">
+								<label for="lasttname">* שם משפחה</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="id">* תעודת זהות</label>
+							</div>
+						</div>
+						<div class="row">
+						   
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.street.$invalid && !userRegistrationform.street.$pristine" class="help-block red-text">Please enter street</p><input type="text" name="street" ng-model="register.street" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.mail.$invalid && !userRegistrationform.mail.$pristine" class="help-block red-text">Please enter mail</p><input type="email" name="mail" ng-model="register.mail" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<label for="street"> רחוב</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="mail">כתובת למשלוח דואר</label>
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.postal.$invalid && !userRegistrationform.postal.$pristine" class="help-block red-text">Please enter postal</p><input type="number" name="postal" min="0" ng-model="register.postal" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.settlement.$invalid && !userRegistrationform.settlement.$pristine" class="help-block red-text">Please enter settlement</p><input type="text" name="settlement" ng-model="register.settlement" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.tax.$invalid && !userRegistrationform.tax.$pristine" class="help-block red-text">Please enter tax</p><input type="text" name="tax" ng-model="register.tax" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<label for="postal">מיקוד</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="settlement">יישוב</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="tax">מס'</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.mobile.$invalid && !userRegistrationform.mobile.$pristine" class="help-block red-text">Please enter mobile</p><input type="number" name="mobile" min="0" ng-model="register.mobile" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.ophone.$invalid && !userRegistrationform.ophone.$pristine" class="help-block red-text">Please enter phone</p><input type="number" name="ophone" min="0" ng-model="register.ophone" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.hphone.$invalid && !userRegistrationform.hphone.$pristine" class="help-block red-text">Please enter phone</p><input type="number" name="hphone" min="0" ng-model="register.hphone" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<label for="mobile">טלפון נייד</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="ophone">טלפון נוסף</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="hphone">טלפון בבית</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.citizenship.$invalid && !userRegistrationform.citizenship.$pristine" class="help-block red-text">Please enter citizenship</p><input type="text" name="citizenship" ng-model="register.citizenship" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.country.$invalid && !userRegistrationform.country.$pristine" class="help-block red-text">Please enter country</p><input type="text" name="country" ng-model="register.country" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.dob.$invalid && !userRegistrationform.dob.$pristine" class="help-block red-text">Please enter dob</p><input type="date" class="date" name="dob" ng-model="register.dob" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<label for="citizenship">אזרחות</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="country">ארץ לידה</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="dob">* תאריך לידה</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.email.$invalid && !userRegistrationform.email.$pristine" class="help-block red-text">Please enter email</p><input type="email" name="email" ng-model="register.email" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.immigration.$invalid && !userRegistrationform.immigration.$pristine" class="help-block red-text">Please enter immigration date</p><input type="date" class="date" name="immigration" ng-model="register.immigration" required>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<p ng-show="userRegistrationform.fstatus.$invalid && !userRegistrationform.fstatus.$pristine" class="help-block red-text">Please enter status</p><input type="text" name="fstatus" ng-model="register.fstatus" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<label for="email">כתובת דוא"ל</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="immigration">תאריך עליה</label>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<label for="fstatus">מצב משפחתי</label>
+							</div>
+						</div>
+						<div class="row">
+							<table class="table ctable">
+								<tr>
+									<th></th>
+									<th>מגמה</th>
+									<th>מסלול יום/ערב</th>
+								</tr>
+								<tr>
+									<td>עדיפות ראשונה</td>
+									<td><input type="text" class="tabinput" name="trend1" ng-model="register.trend1" required></td>
+									<td><input type="text" class="tabinput" name="day1" ng-model="register.day1" required></td></td>
+								</tr>
+								<tr>
+									<td>עדיפות שנייה</td>
+									<td><input type="text" class="tabinput" name="trend2" ng-model="register.trend2" required></td>
+									<td><input type="text" class="tabinput" name="day2" ng-model="register.day2" required></td></td>
+								</tr>
+							</table>
+						</div>
+						<div>
+							<button ng-disabled="userRegistrationform.$invalid" ng-click="registration()">submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
